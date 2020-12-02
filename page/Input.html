@@ -80,6 +80,15 @@
         textError.textContent="";
         else textError.textContent="Mobile is not valid";
     });
+    const text=document.querySelector('#password');
+    const textError=document.querySelector('.text-error');
+    text.addEventListener('input',function(){
+        let MobileRegex=RegExp('^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$');
+        if(MobileRegex.test(text.value))
+        textError.textContent="";
+        else textError.textContent="Password is not valid";
+    });
+    
       </script>
 </body>
 </html>
