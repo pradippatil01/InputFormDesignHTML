@@ -67,11 +67,19 @@
     const text=document.querySelector('#email');
     const textError=document.querySelector('.text-error');
     text.addEventListener('input',function(){
-        let EMAIL_REGEX=RegExp('[a-zA-Z0-9]+[+_.-]?[a-zA-Z0-9]+)+@[a-zA-Z0-9-]+.[a-z]{2,3}.[a-z]{2,3}$');
-        if(EMAIL_REGEX.test(text.value))
+        let emailRegex=RegExp('[a-zA-Z0-9]+[+_.-]?[a-zA-Z0-9]+)+@[a-zA-Z0-9-]+.[a-z]{2,3}.[a-z]{2,3}$');
+        if(emailRegex.test(text.value))
         textError.textContent="";
         else textError.textContent="Email is not valid";
     });
-    </script>
+    const text=document.querySelector('#number');
+    const textError=document.querySelector('.text-error');
+    text.addEventListener('input',function(){
+        let MobileRegex=RegExp('^[0-9]{1,2}[ ][1-9]{1}[0-9]{9}$');
+        if(MobileRegex.test(text.value))
+        textError.textContent="";
+        else textError.textContent="Mobile is not valid";
+    });
+      </script>
 </body>
 </html>
