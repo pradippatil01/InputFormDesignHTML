@@ -8,6 +8,7 @@ body{
     margin: 0px auto;
     padding: 2em;
 }
+
 .headerContainer{
     display: flex;
     flex-flow: column wrap;
@@ -17,7 +18,7 @@ body{
     margin-bottom: 20px;
 }
 form{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 div{
     margin-bottom: 20px;
@@ -25,9 +26,9 @@ div{
     justify-content: space-between;
     align-items: center;
 }
-label, input, button{
+label, input{
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1;
 }
 label{
     text-align: right;
@@ -37,12 +38,61 @@ label{
 input{
     flex: auto;
 }
-button{
-    width: 70%;
-    margin: 0 auto;
-}
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
 error-output{
     font-size: 12px;
-    font-style: italic;
+    font-style: bold;
     color: red;
+}
+
+@media only screen and (max-width : 500px)
+{
+    h1{
+        font-size: 14px;
+        text-align: center;
+    }
+    label,input{
+        width: 110px;
+        font-size: 13px;
+        
+    }
+
+    input{
+        line-height: 1.5;
+    }
+}
+
+  
+
+@media only screen and (max-width : 1200px)
+{
+
+    .headerContainer{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background:tomato;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    label,input{
+        width: 90px;
+        font-size: 15px;
+    }
+        
+
+    input{
+        line-height: 3;
+    }
 }
